@@ -75,6 +75,10 @@ variable "is_prod" {
   default = false
 }
 
+variable "min_instances" {
+  type    = number
+  default = 1
+}
 variable "max_instances" {
   type    = number
   default = 5
