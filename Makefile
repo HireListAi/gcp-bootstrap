@@ -9,7 +9,7 @@ OUT_DIR := scripts modules
 MKDIR_P = mkdir -p
 TF = terraform
 TF_DIR := environments
-REGION="europe-west3"
+REGION="us-central1"
 S3_BUCKET="gs://$(ENV)-tfstate-$(NOW)"
 
 BOLD=$(shell tput bold)
@@ -50,7 +50,7 @@ check-env: ## Check Variables
 	 fi
 	@if [ -z $(REGION) ]; then \
 		echo "$(BOLD)$(RED)Resource Location was not set$(RESET)"; \
-		echo "$(BOLD)Example usage: \`ENV=stage REGION=europe-west3 make plan\`$(RESET)"; \
+		echo "$(BOLD)Example usage: \`ENV=stage REGION=us-central1 make plan\`$(RESET)"; \
 		exit 1; \
 	 fi
 

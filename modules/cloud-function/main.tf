@@ -12,7 +12,7 @@ resource "google_storage_bucket_object" "archive_function" {
 # https://www.terraform.io/docs/providers/google/r/cloudfunctions_function.html
 resource "google_cloudfunctions2_function" "function" {
   name        = var.function_name
-  location    = "europe-west1"
+  location    = "us-central1"
   description = var.function_description
   labels      = var.labels
 
@@ -38,7 +38,7 @@ resource "google_cloudfunctions2_function" "function" {
   }
 
   event_trigger {
-    trigger_region = "europe-west1"
+    trigger_region = "us-central1"
     event_type     = "google.cloud.pubsub.topic.v1.messagePublished"
     pubsub_topic   = var.pubsub_trigger_topic
     retry_policy   = "RETRY_POLICY_RETRY"

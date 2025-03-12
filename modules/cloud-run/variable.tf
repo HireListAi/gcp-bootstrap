@@ -1,5 +1,5 @@
 variable "region" {
-  default = "europe-west1"
+  default = "us-central1"
 }
 
 variable "project_id" {
@@ -82,6 +82,11 @@ variable "min_instances" {
 variable "max_instances" {
   type    = number
   default = 5
+}
+
+variable "cpu_throttling" {
+  type    = bool
+  default = false
 }
 
 variable "timeout_seconds" {

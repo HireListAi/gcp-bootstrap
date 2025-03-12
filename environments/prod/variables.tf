@@ -7,5 +7,5 @@ variable "project_id" {
 variable "region" {
   type        = string
   description = "The region where to deploy resources"
-  default     = "europe-west3"
+  default     = "us-central1"
 }
